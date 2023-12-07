@@ -1,0 +1,23 @@
+header {
+   
+    text-align: center;
+    background-color: var(--color-gray-light);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0 0 20px;
+}
+
+header p {
+    margin: 0 0 10px;
+}
+
+header div {
+    background-color: rgba(232, 229, 229, 0.7);
+    padding: 10px;
+    color: rgb(11, 11, 11);
+    font-size: 20px;
+}

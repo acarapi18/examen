@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopBiker</title>
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    
+    
+    <script>
+        function actualizarReloj() {
+          const relojElement = document.getElementById('reloj');
+          const fechaActual = new Date();
+          const hora = fechaActual.getHours();
+          const minutos = fechaActual.getMinutes();
+          const segundos = fechaActual.getSeconds();
+      
+          const horaFormateada = `${hora}:${minutos}:${segundos}`;
+      
+          relojElement.textContent = horaFormateada;
+        }
+      
+        // Actualizar el reloj cada segundo
+        setInterval(actualizarReloj, 1000);
+      
+        // Inicializar el reloj
+        actualizarReloj();
+    </script>
+    
+    
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Navegación -->
+      <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Terms</a>
+        <a href="#">Paymnet</a>
+        <a href="#">Shipping</a>
+        <a href="#">Contact</a>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+      </nav>
+      <div>
+        
+        <table>
+            <tr>
+              <th><img alt="" src="img/logo.png" height="150" /></th>
+              <th><h3>ShopBiker</h3></th>
+              
+            </tr>
+           
+        </table>
+        <table align="center">
+            <tr>
+            <th><img src="img/carrito.png" width="30" height="30" alt=""></th>
+              <th><select id="colors" style="                
+                width: 200px;
+                height: 30px;
+                padding: 5px;
+                background-color: #ffffff;
+                color: black;
+                
+              ">
+                <option value="">CART 0 ITEM</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+              </select></th>
+              <th><input type="imagen" placeholder="Buscar..." src="img/buscar.png" style="
+                width: 250px;
+                height: 30px;
+                padding: 5px;
+                background-color: #ffffff;
+                font-size: 16px;
+                ">
+                </th>              
+            </tr>
+           
+        </table>
+        
+        <button class="my-button">
+            <span>Notebooks</span>
+        </button>
+        <button class="my-button">
+            <span>Tabs</span>
+        </button>
+        <button class="my-button">
+            <span>Mobile</span>
+        </button>
+        <button class="my-button">
+            <span>Pc</span>
+        </button>
+        <button class="my-button">
+            <span>Software</span>
+        </button>   
+       
+      </div>
+    </header>
+
+    <!-- Aside -->
+    <div class="row">
+      <aside>
+        <div id="sidebar">
+          <ul>
+            <li><a href="#" class="active">News</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Payment</a></li>
+            <li><a href="#">Guarante</a></li>
+            <li><a href="#">Helpdesk</a></li>
+          </ul>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-back">
+              <h2>Imagenes</h2>
+              <p></p>
+              <div class="flip-card-front">
+                
+                <img src="img/image1.webp" alt="Imagen 1" id="imagen" style="width: 100%" onclick="cambiarFoto()">
+                
+            
+                      <script>
+                        function cambiarFoto() {
+                          var imagenElement = document.getElementById("imagen");
+                          
+                          // Verificar la imagen actual y cambiarla
+                          if (imagenElement.src.endsWith("img/image1.webp")) {
+                            imagenElement.src = "img/imagen2.jpg";
+                          } else {
+                            imagenElement.src = "img/image1.webp";
+                          }
+                        }
+                      </script>
+              </div>                
+          </div>
+            <div class="flip-card-back">
+                <h2>Reloj</h2>
+                <p></p>
+                <div class="flip-card-front">
+                    <div id="reloj"></div>
+                </div>                
+            </div>
+            
+            
+            <div class="flip-card-back">
+              <h2>Redes Sociales</h2>
+              <p></p>
+              <div class="flip-card-front">
+               
+                <img src="img/me-gusta.png" style="width: 50%" alt="Me Gusta" id="likeImage" onclick="incrementarContador()">
+  <p id="likeCount">0 Me Gusta</p>
+                      <script>
+                        let contador = 0;
+
+                    function incrementarContador() {
+                      contador++;
+                      actualizarContador();
+                    }
+
+                    function actualizarContador() {
+                      const likeCountElement = document.getElementById("likeCount");
+                      likeCountElement.textContent = contador + (contador === 1 ? " Me Gusta" : " Me Gustan");
+                    }
+
+                      </script>
+                
+              </div>
+              <img src="img/rdsociales.jpg" alt="" style="width: 100%">
+            </div>
+          </div>
+        </div>
+
+       
+      </aside>
+
+      <section class="main">
+        <article>
+          
+
+          <img alt="post 1" src="img/shopbike.webp" />
+          
+        </article>
+
+        <article>
+          <h2>
+            News | 
+          </h2>
+          <h5>Reynaldo Acarapi, Nov 5, 2023</h5>
+          
+          <p>
+            Copos de avena: valores nutricionales, calorías y propiedades Los
+            copos de avena son un derivado natural de los granos de avena:
+            veamos sus valores nutricionales, propiedades beneficiosas y usos
+            más comunes. Los copos de avena son un producto alimenticio obtenido
+            por la presión mecánica de los…
+          </p>
+          <a href="#" class="read-more">Leer más</a>
+        </article>
+    <article>
+        <p></p>
+        <section id="photo-container">
+          <p></p>
+            <div class="column"> 
+                <img src="img/carrera.jpg" />
+                <h2>Montañera</h2>
+                <p>Contenido de la columna 1</p><a href="#" class="read-more">Comprar</a><a href="#" class="read-more">Detalle</a></div>
+            <div class="column"> 
+                <img src="img/bici1.webp"/>
+                <h2>Plegables</h2>
+                <p>Contenido de la columna 2</p><a href="#" class="read-more">Comprar</a><a href="#" class="read-more">Detalle</a></div>
+            <div class="column"> 
+                <img src="img/urbana.jpg" />
+                <h2>Urbanas</h2>
+                <p>Contenido de la columna 3</p><a href="#" class="read-more">Comprar</a><a href="#" class="read-more">Detalle</a></div>
+            <div class="column"> 
+                <img src="img/montañera.jpg"/>
+                <h2>Carrera</h2>
+                <p>Contenido de la columna 4</p><a href="#" class="read-more">Comprar</a><a href="#" class="read-more">Detalle</a></div>
+                
+        </section>
+    </article>
+        </div>
+      </section>
+    </div>
+    <!-- /row -->
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; Reynaldo Marcelo Acarapi Mamani</p>
+    </footer>
+  </body>
+</html>
